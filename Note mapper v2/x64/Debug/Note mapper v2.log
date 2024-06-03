@@ -1,0 +1,7 @@
+﻿  Gui.cpp
+C:\vcpkg-master\vcpkg-master\installed\x64-windows\include\raygui.h(2654,46): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\Gui.cpp(49,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\Gui.cpp(52,24): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Note mapper v2.vcxproj -> C:\Users\WB\Documents\programming\Note mapper v2\x64\Debug\Note mapper v2.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
