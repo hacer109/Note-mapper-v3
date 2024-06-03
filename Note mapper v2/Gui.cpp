@@ -48,7 +48,7 @@ void Gui::Draw() {
 	GuiDrawText(str2, rec13, 1, GREEN);
 	LineY = GetScreenHeight()/2;
 	
-
+//test test
 	DrawRectangleLines(0, LineY, 400, 10, RED);
 	
 }
