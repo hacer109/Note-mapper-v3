@@ -12,18 +12,19 @@ public:
 	int hoveredId2;
 	Grid(int x, int y, int size):posX(x), posY(y), size(size) {};
 	Color cellColor;
+	const int colnum = 16;
 	GridSquare square[8][16];// GridSquare(posX, posY, 0, LIGHTGRAY, size);
 
 	void AssignGrid() {
 		
 		bool isGray = true;
 		
-
+		
 		for (int i = 0; i < 8; i++) {
 
 			isGray = !isGray;
 			
-			for (int j = 0; j < 16; j++) {
+			for (int j = 0; j < colnum; j++) {
 
 				switch (isGray) {
 
@@ -37,12 +38,14 @@ public:
 
 				
 				square[i][j] = GridSquare(posX+(16 * i * size), posY+(16 * j * size), 0, cellColor, size);
-
+				
 				if (j % 1 == 0) {
 					isGray = !isGray;
 				}
+				GridUpdate();
 			}
 		}
+		GridUpdate();
 
 	}
 	void GridUpdate();

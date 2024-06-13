@@ -42,7 +42,7 @@ void MusicManager(Music music) {
         
         curTime = GetMusicTimePlayed(music);
         
-        curTime += 0.08;
+        curTime += double(0.08);
         cout << curTime << " U TimePlayed  " << GetMusicTimePlayed(music) <<"\n";
         SeekMusicStream(music, curTime);
         
@@ -50,7 +50,7 @@ void MusicManager(Music music) {
     else if (IsKeyPressed(KEY_Y) && !musicPlaying) {
         
         curTime = GetMusicTimePlayed(music);
-        curTime -= 0.08;
+        curTime -= double(0.08);
         cout << curTime << " Y TimePlayed  " << GetMusicTimePlayed(music) << "\n";
         SeekMusicStream(music, curTime);
     }
@@ -67,13 +67,16 @@ int main()
     InitWindow(1366, 768, "Note Mapper protoype");
     SetTargetFPS(60);
     InitAudioDevice();
-    Grid hi = Grid(0,0,3);
-    hi.AssignGrid();
+    Grid hi = Grid(100,360,3);
+   
     Gui gui;
     Music music = LoadMusicStream("assets/sound/Philly_Nice.mp3");
-    
+    SeekMusicStream(music, double(0.08));
     while (!WindowShouldClose())
     {
+        hi.AssignGrid();
+      //hi.GridUpdate();
+        
         MusicManager(music);
         UpdateMusicStream(music);
        
@@ -84,13 +87,15 @@ int main()
         gui.curTime = GetMusicTimePlayed(music);
         gui.songDuration = GetMusicTimeLength(music);
         
+        hi.posY = -gui.curTime * 550 + 360;
+       
         
        
         gui.x = hi.hoveredX;
         gui.y = hi.hoveredY;
         gui.ID = currentID.x;
         gui.ID2 = currentID.y;
-        hi.GridUpdate();
+        
         gui.Update();
         EndDrawing();
         

@@ -5,7 +5,7 @@ void Grid::GridUpdate() {
 	
 	for (int i = 0; i < 8; i++) {
 
-		for (int j = 0; j < 16; j++) {
+		for (int j = 0; j < colnum; j++) {
 
 			square[i][j].SquareUpdate();
 			square[i][j].ID = i;

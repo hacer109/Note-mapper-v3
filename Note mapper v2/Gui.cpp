@@ -46,12 +46,13 @@ void Gui::Draw() {
 	Rectangle rec13{ 750,470,150,24 };
 	GuiProgressBar(rec12, "Song Progress", str, &curTime, 0, songDuration);
 	GuiDrawText(str2, rec13, 1, GREEN);
-	LineY = GetScreenHeight()/2;
-	
+	LineY = 360;
+	Rectangle rec14{ 50, LineY, 400, 4 };
 //test test
-	DrawRectangleLines(0, LineY, 400, 10, RED);
+	DrawRectangleRec(rec14,RED);
 	
 }
+
 
 void Gui::Update() {
 

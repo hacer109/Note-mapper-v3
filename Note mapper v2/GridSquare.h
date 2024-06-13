@@ -13,7 +13,7 @@ public:
 	GridSquare(){}
 	GridSquare(int X,int Y, int Length,Color color,int size): squareColor(color),DefaultSquareColor(color)
 		,squareX(X),squareY(Y),length(Length),SquareSize(size){}
-	Rectangle rect = { float(squareX),float(squareY), float(16) * float(SquareSize), float(16) * float(SquareSize) };
+	Rectangle rect;// = { float(squareX),float(squareY), float(16) * float(SquareSize), float(16) * float(SquareSize) };
 	void NoteDraw();
 	void SquareDraw();
 	void IsMouseClickingThis();

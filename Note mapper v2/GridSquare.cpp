@@ -5,6 +5,7 @@
 void GridSquare::SquareDraw()
 {
 	//DrawRectangle(squareX, squareY, 16 * SquareSize, 16 * SquareSize, squareColor);
+	rect = { float(squareX),float(squareY), float(16) * float(SquareSize), float(16) * float(SquareSize) };
 	DrawRectangleRec(rect, squareColor);
 	NoteDraw();
 }
