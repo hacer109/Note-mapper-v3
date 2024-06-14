@@ -14,7 +14,7 @@ void Gui::Draw() {
 	Rectangle rec{ 600,144,392,600 };
 	GuiWindowBox(rec, "Debug Options");
 	Rectangle rec2{ 688,192,120,24 };
-	GuiSpinner(rec2,"section   ",&section,0,100,false);
+	GuiSpinner(rec2,"section   ",&section,0,maxSections-1,false);
 	Rectangle rec3{ 688,230,120,24 };
 	bool CanEditValue = false;
 	if (CheckCollisionPointRec(mousePos, rec3))

@@ -1,10 +1,1 @@
-﻿  main.cpp
-C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\main.cpp(45,32): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\main.cpp(53,32): warning C4305: '-=': truncation from 'double' to 'float'
-C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\main.cpp(74,34): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\main.cpp(90,38): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\main.cpp(96,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\main.cpp(97,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  Note mapper v2.vcxproj -> C:\Users\WB\Documents\programming\Note mapper v2\x64\Debug\Note mapper v2.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  Note mapper v2.vcxproj -> C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\x64\Debug\Note mapper v2.exe

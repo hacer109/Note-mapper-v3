@@ -26,7 +26,7 @@ public:
 	const char* str2;
 	char moth;
 	float LineY;
-	
+	int maxSections;
 	int x;
 	int y;
 	int ID;
