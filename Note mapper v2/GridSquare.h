@@ -6,7 +6,7 @@ public:
 	int squareX, squareY, length,SquareSize,ID, ID2;
 	bool hoveredOver;
 
-
+	bool drawNote = false;
 
 	Color squareColor;
 	Color DefaultSquareColor;

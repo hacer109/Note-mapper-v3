@@ -25,15 +25,24 @@ void GridSquare::IsMouseClickingThis() {
 		squareColor = GRAY;
 		if(!IsKeyDown(KEY_G))
 		hoveredOver = true;
-
+		
 	}
 	else
 	{
 		squareColor = DefaultSquareColor;
 		hoveredOver = false;
 	}
+
+	if (IsKeyPressed(KEY_X)&& hoveredOver) {
+		drawNote = !drawNote;
+	}
+
+	
+
 }
 void GridSquare::SquareUpdate() {
+
+	if (drawNote)DrawRectangle(squareX, squareY, 10, 10, RED);
 	SquareDraw();
 	IsMouseClickingThis();
 

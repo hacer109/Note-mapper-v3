@@ -1,1 +1,2 @@
 C:\Users\WB\Documents\programming\Note mapper v2\Note mapper v2\x64\Debug\Note mapper v2.vcxproj.CopyComplete
+C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\Note mapper v2\x64\Debug\Note mapper v2.vcxproj.CopyComplete

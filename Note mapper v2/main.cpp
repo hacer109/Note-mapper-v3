@@ -68,8 +68,10 @@ std::vector<Grid> AssignSections(std::vector<Grid> sections) {
 
     for (int i = 0; i < numOfSections;i++) {
 
-        sections.push_back(Grid(100, 360, 3));
-
+        sections.push_back(Grid(100, 360+(720*i), 3));
+        sections[i].offsetY = 360 + (720 * i);
+        sections[i].sectionStartTime = 1.28 * i;
+        sections[i].sectionEndTime = 1.28 * (i + 1);
     }
     
     return sections;
@@ -90,6 +92,8 @@ int main()
    // SeekMusicStream(music, double(0.08));
     while (!WindowShouldClose())
     {
+
+
        // hi.AssignGrid();
         sections[gui.section].AssignGrid();
       //hi.GridUpdate();
@@ -104,9 +108,9 @@ int main()
         gui.curTime = GetMusicTimePlayed(music);
         gui.songDuration = GetMusicTimeLength(music);
         
-        sections[gui.section].posY = -gui.curTime * 550 + 360;
+        sections[gui.section].posY = -gui.curTime * 550 + sections[gui.section].offsetY; // +360
        
-        std::cout << sections.size() << "\n" << endl;
+       // std::cout << sections.size() << "\n" << endl;
        
         gui.x = sections[gui.section].hoveredX;
         gui.y = sections[gui.section].hoveredY;
@@ -114,6 +118,9 @@ int main()
         gui.ID2 = currentID.y;
         
         gui.Update();
+
+        if (gui.curTime >= sections[gui.section].sectionEndTime) gui.section++;
+        
         EndDrawing();
         
     }

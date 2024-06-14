@@ -10,11 +10,13 @@ public:
 	int hoveredY;
 	int hoveredId;
 	int hoveredId2;
+	int offsetY;
 	Grid(int x, int y, int size):posX(x), posY(y), size(size) {};
 	Color cellColor;
 	const int colnum = 16;
 	GridSquare square[8][16];// GridSquare(posX, posY, 0, LIGHTGRAY, size);
-
+	double sectionStartTime;
+	double sectionEndTime;
 	void AssignGrid() {
 		
 		bool isGray = true;
