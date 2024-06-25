@@ -1,12 +1,1 @@
-﻿  Grid.cpp
-  main.cpp
-C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\Note mapper v2\main.cpp(46,32): warning C4305: '+=': truncation from 'double' to 'float'
-C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\Note mapper v2\main.cpp(54,32): warning C4305: '-=': truncation from 'double' to 'float'
-C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\Note mapper v2\main.cpp(90,38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\Note mapper v2\main.cpp(111,57): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\Note mapper v2\main.cpp(117,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\Note mapper v2\main.cpp(118,28): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  Note mapper v2.vcxproj -> C:\Users\ASUS\Documents\GitHub\Note-mapper-v3\x64\Debug\Note mapper v2.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  Note mapper v2.vcxproj -> C:\Users\WB\Documents\programming\Note mapper v2\x64\Debug\Note mapper v2.exe

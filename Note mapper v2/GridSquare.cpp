@@ -12,7 +12,7 @@ void GridSquare::SquareDraw()
 
 void GridSquare::NoteDraw() {
 
-	
+	DrawCircle(squareX+24, squareY+24, 20, RED);
 
 }
 
@@ -25,6 +25,11 @@ void GridSquare::IsMouseClickingThis() {
 		squareColor = GRAY;
 		if(!IsKeyDown(KEY_G))
 		hoveredOver = true;
+
+		if (IsKeyPressed(KEY_A))
+		{
+			drawNote = false;
+		}
 		
 	}
 	else
@@ -33,16 +38,16 @@ void GridSquare::IsMouseClickingThis() {
 		hoveredOver = false;
 	}
 
-	if (IsKeyPressed(KEY_X)&& hoveredOver) {
-		drawNote = !drawNote;
-	}
+	std::cout << drawNote << "\n";
 
 	
 
 }
 void GridSquare::SquareUpdate() {
 
-	if (drawNote)DrawRectangle(squareX, squareY, 10, 10, RED);
+	if (drawNote == true) {
+		NoteDraw();
+	}
 	SquareDraw();
 	IsMouseClickingThis();
 

@@ -48,6 +48,7 @@ void Gui::Draw() {
 	GuiDrawText(str2, rec13, 1, GREEN);
 	LineY = 360;
 	Rectangle rec14{ 50, LineY, 400, 4 };
+	
 //test test
 	DrawRectangleRec(rec14,RED);
 	

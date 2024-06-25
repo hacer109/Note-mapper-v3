@@ -63,15 +63,15 @@ void MusicManager(Music music) {
 std::vector<Grid> AssignSections(std::vector<Grid> sections) {
 
 
-    int numOfSections = 73;//add formula to calculate
+    int numOfSections = 90;//add formula to calculate
 
 
     for (int i = 0; i < numOfSections;i++) {
 
-        sections.push_back(Grid(100, 360+(720*i), 3));
+        sections.push_back(Grid(100, 360, 3));
         sections[i].offsetY = 360 + (720 * i);
         sections[i].sectionStartTime = 1.28 * i;
-        sections[i].sectionEndTime = 1.28 * (i + 1);
+        sections[i].sectionEndTime = 1.28 * (i + 1);//1.397
     }
     
     return sections;
@@ -89,13 +89,14 @@ int main()
     Gui gui;
     gui.maxSections = sections.size();
     Music music = LoadMusicStream("assets/sound/Philly_Nice.mp3");
-   // SeekMusicStream(music, double(0.08));
+    //SeekMusicStream(music, double(1.397));
     while (!WindowShouldClose())
     {
 
 
        // hi.AssignGrid();
         sections[gui.section].AssignGrid();
+       
       //hi.GridUpdate();
         
         MusicManager(music);
@@ -108,7 +109,7 @@ int main()
         gui.curTime = GetMusicTimePlayed(music);
         gui.songDuration = GetMusicTimeLength(music);
         
-        sections[gui.section].posY = -gui.curTime * 550 + sections[gui.section].offsetY; // +360
+        sections[gui.section].posY = -gui.curTime * 550 +  sections[gui.section].offsetY; // +360
        
        // std::cout << sections.size() << "\n" << endl;
        
@@ -119,7 +120,7 @@ int main()
         
         gui.Update();
 
-        if (gui.curTime >= sections[gui.section].sectionEndTime) gui.section++;
+        if (gui.curTime > sections[gui.section].sectionEndTime) gui.section++;
         
         EndDrawing();
         
